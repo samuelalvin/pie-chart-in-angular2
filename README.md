@@ -7,4 +7,4 @@ npm install
 npm run d3-typings
 npm start
 ```
-You can also see the app on [this Plunker](https://plnkr.co/edit/EoOdyCFGZZVHAFhYRA18?p=preview)
+You can also see the app live on [this Plunker](https://embed.plnkr.co/EoOdyCFGZZVHAFhYRA18/)
