@@ -47,6 +47,12 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
 
+      // d3
+      { pattern: 'node_modules/d3/*.js', included: false, watched: false },
+      { pattern: 'node_modules/d3/*.js.map', included: false, watched: false },
+      { pattern: 'node_modules/d3/**/*.js', included: false, watched: false },
+      { pattern: 'node_modules/d3/**/*.js.map', included: false, watched: false },
+
       // RxJs
       { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
@@ -79,6 +85,9 @@ module.exports = function(config) {
 
     // Proxied base paths for loading assets
     proxies: {
+      // proxy path for templateUrl and styleUrl of the Angular Components
+      '/app/':'/base/src/app/',
+
       // required for modules fetched by SystemJS
       '/base/src/node_modules/': '/base/node_modules/'
     },
@@ -91,7 +100,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     singleRun: false
   })
 }
