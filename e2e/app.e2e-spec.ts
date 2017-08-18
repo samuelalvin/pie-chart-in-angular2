@@ -1,8 +1,8 @@
 import { browser, element, by } from 'protractor';
 
-describe('QuickStart E2E Tests', function () {
+describe('Pie Chart E2E Tests', function () {
 
-  let expectedMsg = 'Hello Angular';
+  let expectedMsg = 'Pie Chart with dynamic data';
 
   beforeEach(function () {
     browser.get('');
